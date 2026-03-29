@@ -10,12 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const lightbox = document.getElementById("lightbox-overlay");
   const lightboxImg = lightbox ? lightbox.querySelector("img") : null;
   const lightboxCaption = lightbox ? lightbox.querySelector(".caption") : null;
-  const closeLightbox = lightbox ? lightbox.querySelector(".close-lightbox") : null;
+  const closeLightbox = lightbox
+    ? lightbox.querySelector(".close-lightbox")
+    : null;
 
   const parseColor = (color) => {
     if (!color) return null;
     const match = color.match(
-      /rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)(?:\s*,\s*([0-9.]+))?\s*\)/
+      /rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)(?:\s*,\s*([0-9.]+))?\s*\)/,
     );
     if (!match) return null;
     return {
@@ -166,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     revealItems.forEach((item) => observer.observe(item));
@@ -191,5 +193,5 @@ window.addEventListener("load", () => {
   setTimeout(() => {
     loader.style.display = "none";
     document.body.classList.remove("is-loading");
-  }, 520);
+  }, 320);
 });
