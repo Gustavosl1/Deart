@@ -1148,7 +1148,7 @@ a {
 
 @media (max-width: 480px) {
   .navbar {
-    min-height: 64px;
+    min-height: 56px;
   }
 
   .navbar-brand img {
@@ -1203,7 +1203,7 @@ a {
   }
 
   .navbar {
-    min-height: 56px;
+    min-height: 52px;
   }
 
   .loader-panel img {
@@ -1256,8 +1256,8 @@ a {
 /* Mobile Extra Optimizations */
 @media (max-width: 640px) {
   .container-fluid {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .section-title-wrap h2 {
@@ -1307,5 +1307,14 @@ a {
   .service-card p,
   .value-card p {
     font-size: 0.9rem;
+  }
+
+  .navbar {
+    min-height: 48px;
+  }
+
+  .container-fluid {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
   }
 }
